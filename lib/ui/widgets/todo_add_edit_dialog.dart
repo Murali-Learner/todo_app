@@ -47,7 +47,7 @@ class TodoDialogState extends State<TodoDialog> {
       if (_isEditMode) {
         provider.updateTodo(
           widget.todo!.id,
-          _descriptionController.text,
+          description: _descriptionController.text,
           title: _titleController.text,
         );
       } else {

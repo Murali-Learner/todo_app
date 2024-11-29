@@ -16,8 +16,8 @@ class TodoProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void updateTodo(String todoId, String description,
-      {String? title, bool? isCompleted}) {
+  void updateTodo(String todoId,
+      {String? title, String? description, bool? isCompleted}) {
     if (todos.containsKey(todoId)) {
       final currentTodo = todos[todoId]!;
       todos[todoId] = currentTodo.copyWith(

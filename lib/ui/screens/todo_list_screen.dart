@@ -22,9 +22,9 @@ class TodoListScreen extends StatelessWidget {
           return todoProvider.todos.isEmpty
               ? const TodoListEmptyWidget()
               : ListView.builder(
-                  itemCount: 15,
+                  itemCount: todoProvider.todos.length,
                   itemBuilder: (context, index) {
-                    final todo = todoProvider.todos.values.elementAt(0);
+                    final todo = todoProvider.todos.values.elementAt(index);
                     return TodoItemWidget(todo: todo);
                   },
                 );
